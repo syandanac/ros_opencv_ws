@@ -38,7 +38,7 @@ opencv_ws/
 ### 2. Pengaturan Workspace
 
 ```bash
-# Buat workspace
+# Buat workspace (copy paste pada terminal linux, shortcut untuk membuka terminal ctrl+shift+t)
 mkdir -p ~/opencv_ws/src
 cd ~/opencv_ws/src
 
