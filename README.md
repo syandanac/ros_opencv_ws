@@ -38,20 +38,28 @@ opencv_ws/
 ### 2. Pengaturan Workspace
 
 ```bash
-# Buat workspace (copy paste pada terminal linux, shortcut untuk membuka terminal ctrl+shift+t)
+# 1. Buat folder workspace
 mkdir -p ~/opencv_ws/src
 cd ~/opencv_ws/src
 
-# Clone/Salin package di sini
+# 2. Clone repository langsung ke folder src
+git clone https://github.com/syandanac/ros_opencv_ws.git
+
+# 3. Buat package drone_control (jika belum ada di dalam repo tersebut)
 catkin_create_pkg drone_control std_msgs rospy sensor_msgs geometry_msgs cv_bridge mavros_msgs
 
-# Build dan Source
+# 4. Install dependencies sistem yang diperlukan
 cd ~/opencv_ws
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+
+# 5. Build dan Konfigurasi Environment
 catkin_make
 echo "source ~/opencv_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-# Berikan izin eksekusi pada script
+# 6. Berikan izin eksekusi pada semua file python
+chmod +x ~/opencv_ws/src/ros_opencv_ws/*.py
 chmod +x ~/opencv_ws/src/drone_control/scripts/*.py
 
 ```
