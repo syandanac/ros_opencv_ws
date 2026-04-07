@@ -81,11 +81,16 @@ roslaunch mavros apm.launch fcu_url:="udp://127.0.0.1:14550@"
 
 ```
 
-**Terminal 4: Vision & Mission**
+**Terminal 4: Vision Node**
 
 ```bash
 rosrun drone_control detector_node.py
-# Pada tab/terminal baru:
+
+```
+
+**Terminal 5: Mission Node**
+
+```bash
 rosrun drone_control mission_control.py
 
 ```
