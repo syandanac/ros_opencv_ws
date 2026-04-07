@@ -81,7 +81,7 @@ sim_vehicle.py -v ArduCopter -f gazebo-iris --console
 # 1. Source file bash agar workspace terbaca oleh sistem
 cd ~/ardupilot_gazebo_krti
 source devel/setup.bash
-# 2. Jalankan node simulasi KRTI pada g
+# 2. Jalankan node simulasi KRTI pada Gazebo
 roslaunch ardupilot_gazebo krti.launch
 
 ```
